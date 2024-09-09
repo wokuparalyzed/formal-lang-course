@@ -1,11 +1,9 @@
-import pytest
 import os
 from project.graphutils import (
     GraphData,
     create_and_save_two_cycles_graph,
     save_graph_to_file,
 )
-import cfpq_data
 import networkx as nx
 
 
@@ -13,8 +11,8 @@ def test_graph_data():
     graph_name = "travel"
     graph_data = GraphData(graph_name)
 
-    assert graph_data.nodes > 0, "nodes count must be more then 0"
-    assert graph_data.edges > 0, "edges count must be more then 0"
+    assert graph_data.nodes == 131, "nodes count must be 131"
+    assert graph_data.edges == 277, "edges count must be 277"
 
     assert isinstance(graph_data.labels, list), "labeles must be in list"
     assert len(graph_data.labels) > 0, "labels must not be empty"
