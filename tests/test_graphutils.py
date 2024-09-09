@@ -5,7 +5,7 @@ import cfpq_data
 import networkx as nx
 
 def test_graph_data():
-    graph_name = "travel"  
+    graph_name = "travel"
     graph_data = GraphData(graph_name)
 
     assert graph_data.nodes > 0, "nodes count must be more then 0"
